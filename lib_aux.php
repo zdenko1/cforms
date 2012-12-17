@@ -505,12 +505,12 @@ endif;
 
 
 class cformsRSS {
-	function vars($public_query_vars) {
+	function static vars($public_query_vars) {
         $public_query_vars[] = 'cformsRSS';
         return $public_query_vars;
     }
 
-	function outputRSS() {
+	function static outputRSS() {
 		global $wpdb, $cformsSettings, $plugindir;
 		$temp=get_query_var('cformsRSS');
 		if( $temp <> '' ) {
