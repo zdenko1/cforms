@@ -153,7 +153,7 @@ function cforms_init() {
 	$plugindir   = basename(dirname(__FILE__));
 	$sep = strpos(dirname(__FILE__), '\\') !==false ? '\\' : '/';
 
-	$role = get_role('editor');
+	$role = get_role('administrator');
 	if(!$role->has_cap('manage_cforms')) {
 		$role->add_cap('manage_cforms');
 	}
