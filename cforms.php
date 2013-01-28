@@ -70,11 +70,11 @@ function settings_corrupted() {
 	$tmp = basename(dirname(__FILE__));
 
 	if (function_exists('add_menu_page')){
-		add_menu_page(__('cformsII', 'cforms'), __('cformsII', 'cforms'), 'edit_pages', $tmp.'/cforms-corrupted.php', '', get_cf_plugindir().'/'.$tmp.'/images/cformsicon.gif' );
-		add_submenu_page($tmp.'/cforms-corrupted.php', __('Corrupted Settings', 'cforms'), __('Corrupted Settings', 'cforms'), 'edit_pages', $tmp.'/cforms-corrupted.php' );
+		add_menu_page(__('cformsII', 'cforms'), __('cformsII', 'cforms'), 'manage_cforms', $tmp.'/cforms-corrupted.php', '', get_cf_plugindir().'/'.$tmp.'/images/cformsicon.gif' );
+		add_submenu_page($tmp.'/cforms-corrupted.php', __('Corrupted Settings', 'cforms'), __('Corrupted Settings', 'cforms'), 'manage_cforms', $tmp.'/cforms-corrupted.php' );
     }
 	elseif (function_exists('add_management_page'))
-		add_management_page(__('cformsII', 'cforms'), __('cformsII', 'cforms'), 'edit_pages', $tmp.'/cforms-corrupted.php');
+		add_management_page(__('cformsII', 'cforms'), __('cformsII', 'cforms'), 'manage_cforms', $tmp.'/cforms-corrupted.php');
 
     add_action('wp_print_scripts', 'cforms_scripts_corrupted' );
 }
